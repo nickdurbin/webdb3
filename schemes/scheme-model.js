@@ -1,7 +1,7 @@
 const db = require('../data/dbConfig')
 
 function add(schemeData) {
-  return db('scheme')
+  return db('schemes')
   .insert(schemeData)
   .then(id => {
     return findById(id[0])
@@ -19,11 +19,11 @@ function addStep(data, id) {
 }
 
 function find() {
-  return db('scheme')
+  return db('schemes')
 }
 
 function findById(id) {
-  return db('scheme')
+  return db('schemes')
   .where({ id })
   .first()
 }
@@ -33,13 +33,13 @@ function findSteps(id) {
 }
 
 function remove(id) {
-  return db('scheme')
+  return db('schemes')
   .where({ id })
   .del()
 }
 
 function update(changes, id) {
-  return db('sheme')
+  return db('schemes')
   .where({ id })
   .update(changes)
   .then(id => {
