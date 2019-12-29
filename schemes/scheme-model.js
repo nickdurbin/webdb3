@@ -9,7 +9,7 @@ function add(schemeData) {
 }
 
 function addStep(data, id) {
-  const stepData = { scheme_idd: id, ...data }
+  const stepData = { scheme_id: id, ...data }
   
   return db('steps')
   .insert(stepData)
