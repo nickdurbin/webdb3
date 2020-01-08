@@ -15,7 +15,8 @@
 
     SELECT Product.ProductName, OrderDetail.Quantity FROM [orderdetail]
     JOIN [Product] ON OrderDetail.ProductId = Product.Id
-    WHERE OrderDetail.OrderId = 10251;
+    WHERE OrderDetail.OrderId = 10251
+    ORDER BY Product.ProductName;
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
 
